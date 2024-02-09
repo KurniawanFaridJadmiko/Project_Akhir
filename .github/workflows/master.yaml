@@ -47,7 +47,7 @@ jobs:
         run: docker build -t ghcr.io/kurniawanfaridjadmiko/project_ke-7:${{ github.run_number }} .
 
       - name: Log in GHCR
-        run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKENBE }}
+        run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKEN }}
 
       - name: Push to GHCR
         run: docker push ghcr.io/kurniawanfaridjadmiko/project_ke-7:${{ github.run_number }}
